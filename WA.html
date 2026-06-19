@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat WA Tanpa Save Nomor</title>
+</head>
+<body>
+
+<h2>Kirim Pesan WhatsApp</h2>
+
+<input id="nomor" placeholder="628xxxxxx" />
+<br><br>
+
+<input id="pesan" placeholder="Isi pesan" />
+<br><br>
+
+<button onclick="kirim()">Kirim WhatsApp</button>
+
+<script>
+function kirim() {
+  let nomor = document.getElementById("nomor").value;
+  let pesan = document.getElementById("pesan").value;
+
+  let url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
